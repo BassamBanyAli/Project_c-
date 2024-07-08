@@ -1,15 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication2.WebForm1" %>
 
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>services</title>
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300 ;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet" />
 
@@ -17,11 +16,18 @@
 
     <link rel="stylesheet" href="css/icon.css" />
 
-    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/carousel2.css" />
 
     <link rel="stylesheet" href="css/theme.css" />
 
     <link rel="stylesheet" href="css/template.css" />
+    <link rel="stylesheet" href="StyleSheet1.css" />
+
+    <style>
+        
+       
+     
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -30,7 +36,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand me-lg-5 me-0" href="index.html">
-                        <img src="images/CODE-removebg-preview.png" class="logo-image img-fluid" alt="logo">
+                        <img src="images/CODE-removebg-preview.png" class="logo-image img-fluid" alt="logo" />
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -66,7 +72,7 @@
 
                         <div class="col-lg-12 col-12 text-center">
 
-                            <h2 class="mb-0">Services</h2>
+                            <h2 class="mb-0">Add Technologies</h2>
                         </div>
 
                     </div>
@@ -79,131 +85,55 @@
                     <div class="row">
 
 
-
+                        <a href="Students_C#.txt"></a>
                         <div class="col-lg-12 col-12">
                             <div class="section-title-wrap mb-5">
-                                <h4 class="section-title">Technologies and questions</h4>
+                                <h4 class="section-title"><a href="#popup">Add Technologies and questions <i class="bi bi-plus-circle-fill"></i></a></h4>
                             </div>
                         </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div class="team-thumb bg-white shadow-lg">
-                                <img src="images/images.jpg"
-                                    class="about-image img-fluid" alt="">
-
-                                <div class="team-info">
-                                    <h4 class="mb-2">#C Sharp
-                                    </h4>
-
-                                    <span class="badge">Flexibility and Power</span>
-
-                                    <span class="badge"> Strong Tooling </span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item"></li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#">TECH<i class="bi bi-plus-circle-fill"></i></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#">QUES <i class="bi bi-plus-circle-fill"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div class="team-thumb bg-white shadow-lg">
-                                <img src="images/images (2).jpg"
-                                    class="about-image img-fluid" alt="">
-
-                                <div class="team-info">
-                                    <h4 class="mb-2">C++
-                                    </h4>
-
-                                    <span class="badge">Wide Range</span>
-
-                                    <span class="badge">Memory Management</span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item"></li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#">TECH <i class="bi bi-plus-circle-fill"></i></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#">QUES <i class="bi bi-plus-circle-fill"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
-                            <div class="team-thumb bg-white shadow-lg">
-                                <img src="images/download (1).jpg"
-                                    class="about-image img-fluid" alt="">
-
-                                <div class="team-info">
-                                    <h4 class="mb-2">Asp
-                                    </h4>
-
-                                    <span class="badge">Support for Multiple Scripting Languages</span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item">
-                                            <a href="#">TECH <i class="bi bi-plus-circle-fill"></i></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#">QUES <i class="bi bi-plus-circle-fill"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="team-thumb bg-white shadow-lg">
-                                <img src="images/Skills-you-need-to-get-a-job-as-a-JavaScript-developer-1.png"
-                                    class="about-image img-fluid" alt="">
-
-                                <div class="team-info">
-                                    <h4 class="mb-2">Java Script 
-                                    </h4>
-
-                                    <span class="badge">Versatility</span>
-
-                                    <span class="badge">Client-Side Scripting</span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item">
-                                            <a href="#">TECH <i class="bi bi-plus-circle-fill"></i></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#">QUES <i class="bi bi-plus-circle-fill"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>
         </main>
+
+
+
+
+
+
+        <!-- The popup window -->
+        <div id="popup">
+            <h2>Add Technologies</h2>
+            <br />
+            <br />
+            <asp:Label runat="server" AssociatedControlID="ch1">#C</asp:Label>
+            <asp:CheckBox runat="server" ID="ch1" />
+            <br />
+            <br />
+            <asp:Label runat="server" AssociatedControlID="ch2">C++</asp:Label>
+            <asp:CheckBox runat="server" ID="ch2" /><br />
+            <br />
+            <asp:Label runat="server" AssociatedControlID="ch3">Php</asp:Label>
+            <asp:CheckBox runat="server" ID="ch3" />
+            <br />
+            <br />
+            <asp:Label runat="server" AssociatedControlID="ch4">Node Js</asp:Label>
+            <asp:CheckBox runat="server" ID="ch4" />
+            <br />
+            <br />
+
+            <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" CClass="button type1 close-popup" />
+
+        </div>
+        <asp:Panel ID="cardscontainer123" runat="server">
+        </asp:Panel>
+
+       
+
+
+
+
+
 
 
 
@@ -218,7 +148,7 @@
 
                     <div class="col-lg-3 col-md-6 col-12">
                         <a class="navbar-brand" href="index.html">
-                            <img src="images/CODE-removebg-preview.png" class="logo-image img-fluid" alt="logo">
+                            <img src="images/CODE-removebg-preview.png" class="logo-image img-fluid" alt="logo" />
                         </a>
                     </div>
 
@@ -294,5 +224,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="JavaScript.js"></script>
 </body>
 </html>
+

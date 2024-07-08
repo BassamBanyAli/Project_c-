@@ -69,6 +69,10 @@
   <ItemGroup>
     <Content Include="Students_c++.txt" />
     <Content Include="TextFile1.txt" />
+    <Content Include="TextFile2.txt" />
+    <Content Include="Students_Php.txt" />
+    <Content Include="Students_NodeJs.txt" />
+    <Content Include="Students_C#.txt" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />

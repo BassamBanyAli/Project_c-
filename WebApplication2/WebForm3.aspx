@@ -55,14 +55,16 @@
             <asp:Panel runat="server" CssClass="empty-space" Style="height: 50px;"></asp:Panel>
             <asp:Panel runat="server" CssClass="empty-space" Style="height: 50px;"></asp:Panel>
 
-            <div class="container">
-                <asp:GridView ID="questionGridView" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false">
+            <div id="datatable">
+                <asp:GridView ID="questionGridView" runat="server" AutoGenerateColumns="False" CssClass="table custom-table">
                     <Columns>
-                        <asp:BoundField DataField="question" HeaderText="Question" />
-                        <asp:BoundField DataField="answer" HeaderText="Answer" />
+                        <asp:BoundField DataField="QuestionText" HeaderText="Question" />
+                        <asp:BoundField DataField="AnswerText" HeaderText="Answer" />
                     </Columns>
                 </asp:GridView>
             </div>
+
+            <asp:Button ID="btnDownload" runat="server" Text="Download as File" OnClick="btnDownload_Click" CssClass="btn btn-primary mt-3" />
 
             <asp:Panel runat="server" CssClass="empty-space" Style="height: 50px;"></asp:Panel>
             <asp:Panel runat="server" CssClass="empty-space" Style="height: 50px;"></asp:Panel>
@@ -140,4 +142,3 @@
     <script src="js/custom.js"></script>
 </body>
 </html>
-

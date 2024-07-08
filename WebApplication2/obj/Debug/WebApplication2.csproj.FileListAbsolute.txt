@@ -175,3 +175,8 @@ C:\Users\Orange\source\repos\project_c#\Project_c-\WebApplication2\obj\Debug\Web
 C:\Users\Orange\source\repos\project_c#\Project_c-\WebApplication2\obj\Debug\WebAppli.0DB3FC1A.Up2Date
 C:\Users\Orange\source\repos\project_c#\Project_c-\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\Orange\source\repos\project_c#\Project_c-\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\Orange\source\repos\project_c#\Project_c-\WebApplication2\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Users\Orange\source\repos\project_c#\Project_c-\WebApplication2\bin\roslyn\System.Buffers.dll
+C:\Users\Orange\source\repos\project_c#\Project_c-\WebApplication2\bin\roslyn\System.Memory.dll
+C:\Users\Orange\source\repos\project_c#\Project_c-\WebApplication2\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Orange\source\repos\project_c#\Project_c-\WebApplication2\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll

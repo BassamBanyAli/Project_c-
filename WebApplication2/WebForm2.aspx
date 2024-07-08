@@ -229,39 +229,46 @@
             <asp:TextBox ID="txtSearch" CssClass="form-control" runat="server" ClientIDMode="Static" AutoPostBack="true" OnTextChanged="txtSearch_TextChanged" />
             <label class="form-label" for="txtSearch">Search</label>
         </div>
-        <div id="datatable">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table custom-table" OnRowCommand="GridView1_RowCommand" >
-                <Columns>
-                    <asp:TemplateField>
-                        <HeaderTemplate>
-                            <label class="control control--checkbox">
-                                <input type="checkbox" class="js-check-all" onclick="toggleCheckboxes(this);" />
-                                <div class="control__indicator"></div>
-                            </label>
-                        </HeaderTemplate>
-                        <ItemTemplate>
-                            <label class="control control--checkbox">
-                                <asp:CheckBox ID="CheckBox1" runat="server" />
-                                <div class="control__indicator"></div>
-                            </label>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:BoundField DataField="Id" HeaderText="Id" />
-                    <asp:TemplateField HeaderText="Name">
-                        <ItemTemplate>
-                            <a href="#"><%# Eval("Name") %></a>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:BoundField DataField="Email" HeaderText="Email" />
-                    <asp:BoundField DataField="Contact" HeaderText="Contact" />
-                    <asp:BoundField DataField="Course" HeaderText="Course" />
-                    <asp:TemplateField>
-                        <ItemTemplate>
-                            <asp:Button ID="btnDelete" runat="server" Text="Delete" CommandName="DeleteRecord" CommandArgument='<%# Eval("Id") %>' CssClass="btn btn-danger" />
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                </Columns>
-            </asp:GridView>
+<div id="datatable">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table custom-table" OnRowCommand="GridView1_RowCommand">
+        <Columns>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    <label class="control control--checkbox">
+                        <input type="checkbox" class="js-check-all" onclick="toggleCheckboxes(this);" />
+                        <div class="control__indicator"></div>
+                    </label>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <label class="control control--checkbox">
+                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                        <div class="control__indicator"></div>
+                    </label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="Id" HeaderText="Id" />
+            <asp:TemplateField HeaderText="Name">
+                <ItemTemplate>
+                    <asp:HyperLink ID="HyperLink1" runat="server" 
+                        NavigateUrl='<%# Eval("Id", "WebForm3.aspx?Id={0}") %>' 
+                        Text='<%# Eval("Name") %>'>
+                    </asp:HyperLink>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="Email" HeaderText="Email" />
+            <asp:BoundField DataField="Contact" HeaderText="Contact" />
+            <asp:BoundField DataField="Course" HeaderText="Course" />
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:Button ID="btnDelete" runat="server" Text="Delete" CommandName="DeleteRecord" CommandArgument='<%# Eval("Id") %>' CssClass="btn btn-danger" />
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+    </asp:GridView>
+</div>
+
+
+
         </div>
 
 
