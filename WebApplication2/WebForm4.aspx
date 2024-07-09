@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="WebApplication2.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm4.aspx.cs" Inherits="WebApplication2.WebForm4" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -164,7 +165,7 @@
               <asp:Panel runat="server" CssClass="empty-space" Style="height: 50px;"></asp:Panel>
               
              <div class="content">
-                                      <h2 class="mb-4 text-center">C++ Technology Students</h2>
+                                      <h2 class="mb-4 text-center">C# Technology Students</h2>
 
    
    <div class="container">

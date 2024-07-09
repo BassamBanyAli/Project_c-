@@ -102,37 +102,27 @@
 
 
         <!-- The popup window -->
-        <div id="popup">
+       <div id="popup">
             <h2>Add Technologies</h2>
             <br />
             <br />
-            <asp:Label runat="server" AssociatedControlID="ch1">#C</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="ch1">C#</asp:Label>
             <asp:CheckBox runat="server" ID="ch1" />
             <br />
-            <br />
             <asp:Label runat="server" AssociatedControlID="ch2">C++</asp:Label>
-            <asp:CheckBox runat="server" ID="ch2" /><br />
+            <asp:CheckBox runat="server" ID="ch2" />
             <br />
-            <asp:Label runat="server" AssociatedControlID="ch3">Php</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="ch3">PHP</asp:Label>
             <asp:CheckBox runat="server" ID="ch3" />
-            <br />
             <br />
             <asp:Label runat="server" AssociatedControlID="ch4">Node Js</asp:Label>
             <asp:CheckBox runat="server" ID="ch4" />
             <br />
-            <br />
-
-            <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" CClass="button type1 close-popup" />
-
+            <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
         </div>
+
         <asp:Panel ID="cardscontainer123" runat="server">
         </asp:Panel>
-
-       
-
-
-
-
 
 
 

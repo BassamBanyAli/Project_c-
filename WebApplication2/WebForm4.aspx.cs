@@ -8,10 +8,10 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication2
 {
-    //c++
-    public partial class WebForm2 : System.Web.UI.Page
+    //c#
+    public partial class WebForm4 : System.Web.UI.Page
     {
-        private string filePath = "/Students_c++.txt";
+        private string filePath = "~/Students_C#.txt";  // Adjusted file path
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,12 +30,20 @@ namespace WebApplication2
 
         private void SaveStudentsToFile(List<Student> students)
         {
-            using (StreamWriter writer = new StreamWriter(Server.MapPath(filePath)))
+            try
             {
-                foreach (var student in students)
+                using (StreamWriter writer = new StreamWriter(Server.MapPath(filePath)))
                 {
-                    writer.WriteLine($"{student.Id},{student.Name},{student.Email},{student.Contact},{student.Course}");
+                    foreach (var student in students)
+                    {
+                        writer.WriteLine($"{student.Id},{student.Name},{student.Email},{student.Contact},{student.Course}");
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or display a message to the user
+                // lblError.Text = "An error occurred while saving data: " + ex.Message;
             }
         }
 
@@ -49,7 +57,7 @@ namespace WebApplication2
                     Name = txtName.Text,
                     Email = txtEmail.Text,
                     Contact = txtContact.Text,
-                    Course = "C++"
+                    Course = "C#"
                 };
 
                 var students = LoadStudentsFromFile(Server.MapPath(filePath));
@@ -64,13 +72,13 @@ namespace WebApplication2
             }
         }
 
-        private List<Student> LoadStudentsFromFile(string filePath)
+        private List<Student> LoadStudentsFromFile(string path)
         {
             var students = new List<Student>();
 
-            if (File.Exists(filePath))
+            if (File.Exists(path))
             {
-                using (StreamReader reader = new StreamReader(filePath))
+                using (StreamReader reader = new StreamReader(path))
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
@@ -104,15 +112,15 @@ namespace WebApplication2
             }
         }
 
-        private void DeleteStudentFromFile(int id, string filePath)
+        private void DeleteStudentFromFile(int id, string path)
         {
-            var lines = File.ReadAllLines(filePath).ToList();
+            var lines = File.ReadAllLines(path).ToList();
             var updatedLines = lines.Where(line => !line.StartsWith(id.ToString() + ",")).ToList();
 
             // Save only if any line was removed
             if (updatedLines.Count < lines.Count)
             {
-                File.WriteAllLines(filePath, updatedLines);
+                File.WriteAllLines(path, updatedLines);
             }
         }
 
@@ -127,8 +135,6 @@ namespace WebApplication2
             GridView1.DataSource = filteredStudents;
             GridView1.DataBind();
         }
-
-
 
         protected void SortById_Click(object sender, EventArgs e)
         {
@@ -153,6 +159,7 @@ namespace WebApplication2
             SaveStudentsToFile(students); // Save sorted list back to file (optional)
             BindGridView();
         }
+
         protected void btnDownload_Click(object sender, EventArgs e)
         {
             var students = LoadStudentsFromFile(Server.MapPath(filePath));
@@ -174,23 +181,17 @@ namespace WebApplication2
 
         protected void btnDeleteAll_Click(object sender, EventArgs e)
         {
-            string filePath = Server.MapPath("/Students_c++.txt");
+            string path = Server.MapPath(filePath);
 
-            if (File.Exists(filePath))
+            if (File.Exists(path))
             {
                 // Clear the file content
-                File.WriteAllText(filePath, string.Empty);
-
-                // Optionally, you can delete the file itself
-                // File.Delete(filePath);
+                File.WriteAllText(path, string.Empty);
 
                 // Rebind GridView to reflect the changes
                 BindGridView();
             }
         }
-
-
-
 
         public class Student
         {

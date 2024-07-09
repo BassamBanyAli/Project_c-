@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="WebApplication2.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm5.aspx.cs" Inherits="WebApplication2.WebForm5" %>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -164,9 +166,8 @@
               <asp:Panel runat="server" CssClass="empty-space" Style="height: 50px;"></asp:Panel>
               
              <div class="content">
-                                      <h2 class="mb-4 text-center">C++ Technology Students</h2>
+                        <h2 class="mb-4 text-center">Php Technology Students</h2>
 
-   
    <div class="container">
 
      
@@ -190,7 +191,7 @@
     </div>
 
  
-<asp:Button ID="btnDeleteAll" runat="server" Text="Delete All" style="margin-left: 10px; border-radius: 6px;" CssClass="btn btn-danger" OnClick="btnDeleteAll_Click" />
+<asp:Button ID="btnDeleteAll" runat="server" Text="Delete All"style="margin-left: 10px; border-radius: 6px;" CssClass="btn btn-danger" OnClick="btnDeleteAll_Click" />
 
                                   <!-- Download Button -->
 <asp:Button ID="btnDownload" runat="server" CssClass="btn btn-primary" style="margin-left: 10px; border-radius: 6px;" OnClick="btnDownload_Click"
@@ -390,3 +391,4 @@
 </body>
 
 </html>>>
+
